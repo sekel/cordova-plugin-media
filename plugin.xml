@@ -94,7 +94,12 @@ id="org.apache.cordova.media"
      </platform>
 
      <!-- ios -->
-     <platform name="ios">    
+     <platform name="ios">
+        <config-file target="*-Info.plist" parent="UIBackgroundModes">
+            <array>
+                <string>audio</string>
+            </array>
+        </config-file>
          <config-file target="config.xml" parent="/*">
              <feature name="Media">
                  <param name="ios-package" value="CDVSound" /> 
